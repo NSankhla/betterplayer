@@ -128,9 +128,11 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
               color: betterPlayerControlsConfiguration.overflowMenuIconsColor,
             ),
             const SizedBox(width: 16),
-            Text(
-              name,
-              style: _getOverflowMenuElementTextStyle(false),
+            RichText(
+              text: TextSpan(
+                text: name,
+                style: _getOverflowMenuElementTextStyle(false),
+              ),
             ),
           ],
         ),
@@ -165,9 +167,11 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
         child: Row(
           children: [
             const SizedBox(width: 16),
-            Text(
-              "$value x",
-              style: _getOverflowMenuElementTextStyle(isSelected),
+            RichText(
+              text: TextSpan(
+                text: "$value x",
+                style: _getOverflowMenuElementTextStyle(isSelected),
+              ),
             )
           ],
         ),
@@ -234,12 +238,15 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
         child: Row(
           children: [
             const SizedBox(width: 16),
-            Text(
-              subtitlesSource.type == BetterPlayerSubtitlesSourceType.none
-                  ? betterPlayerController!.translations.generalNone
-                  : subtitlesSource.name ??
-                      betterPlayerController!.translations.generalDefault,
-              style: _getOverflowMenuElementTextStyle(isSelected),
+            RichText(
+              text: TextSpan(
+                text:
+                    subtitlesSource.type == BetterPlayerSubtitlesSourceType.none
+                        ? betterPlayerController!.translations.generalNone
+                        : subtitlesSource.name ??
+                            betterPlayerController!.translations.generalDefault,
+                style: _getOverflowMenuElementTextStyle(isSelected),
+              ),
             ),
           ],
         ),
@@ -309,9 +316,11 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
         child: Row(
           children: [
             const SizedBox(width: 16),
-            Text(
-              trackName,
-              style: _getOverflowMenuElementTextStyle(isSelected),
+            RichText(
+              text: TextSpan(
+                text: trackName,
+                style: _getOverflowMenuElementTextStyle(isSelected),
+              ),
             ),
           ],
         ),
@@ -332,9 +341,11 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
         child: Row(
           children: [
             const SizedBox(width: 16),
-            Text(
-              name,
-              style: _getOverflowMenuElementTextStyle(isSelected),
+            RichText(
+              text: TextSpan(
+                text: name,
+                style: _getOverflowMenuElementTextStyle(isSelected),
+              ),
             ),
           ],
         ),
@@ -383,9 +394,11 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
         child: Row(
           children: [
             const SizedBox(width: 16),
-            Text(
-              audioTrack.label!,
-              style: _getOverflowMenuElementTextStyle(isSelected),
+            RichText(
+              text: TextSpan(
+                text: audioTrack.label!,
+                style: _getOverflowMenuElementTextStyle(isSelected),
+              ),
             ),
           ],
         ),
