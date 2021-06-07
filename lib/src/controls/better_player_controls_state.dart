@@ -262,7 +262,7 @@ abstract class BetterPlayerControlsState<T extends StatefulWidget>
     final List<String> asmsTrackNames =
         betterPlayerController!.betterPlayerDataSource!.asmsTrackNames ?? [];
     final List<BetterPlayerAsmsTrack> asmsTracks =
-        betterPlayerController!.betterPlayerAsmsTracks;
+        betterPlayerController!.betterPlayerAsmsTracks.sorted((a, b) => (a.bitrate ?? 0).compareTo(b.bitrate ?? 0));
     final List<Widget> children = [];
     for (var index = 0; index < asmsTracks.length; index++) {
       final track = asmsTracks[index];
