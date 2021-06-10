@@ -22,7 +22,7 @@ class BetterPlayerTranslations {
       this.generalRetry = "Retry",
       this.playlistLoadingNextVideo = "Loading next video",
       this.controlsLive = "LIVE",
-      this.controlsNextVideoIn = "Next video in",
+      this.controlsNextVideoIn = "Next episode in",
       this.overflowMenuPlaybackSpeed = "Playback speed",
       this.overflowMenuSubtitles = "Subtitles",
       this.overflowMenuQuality = "Quality",

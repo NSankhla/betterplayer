@@ -528,7 +528,7 @@ class _BetterPlayerCupertinoControlsState
                 child: Padding(
                   padding: const EdgeInsets.all(12),
                   child: Text(
-                    "${_betterPlayerController!.translations.controlsNextVideoIn} $time ...",
+                    "${_betterPlayerController!.translations.controlsNextVideoIn} $time seconds...",
                     style: const TextStyle(color: Colors.white),
                   ),
                 ),
