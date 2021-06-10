@@ -211,12 +211,18 @@ class _BetterPlayerState extends State<BetterPlayer>
 
     final routePageBuilder = _betterPlayerConfiguration.routePageBuilder;
     if (routePageBuilder == null) {
-      return _defaultRoutePageBuilder(
-          context, animation, secondaryAnimation, controllerProvider);
+      return new WillPopScope(
+        onWillPop: () async => false,
+        child: _defaultRoutePageBuilder(
+            context, animation, secondaryAnimation, controllerProvider),
+      );
     }
 
-    return routePageBuilder(
-        context, animation, secondaryAnimation, controllerProvider);
+    return new WillPopScope(
+      onWillPop: () async => false,
+      child: routePageBuilder(
+          context, animation, secondaryAnimation, controllerProvider),
+    );
   }
 
   Future<dynamic> _pushFullScreenWidget(BuildContext context) async {
