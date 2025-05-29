@@ -49,8 +49,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.jhomlala.better_player"
-        minSdkVersion 16
+       minSdkVersion 16
     }
 
     dependencies {
